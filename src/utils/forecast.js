@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Something wrong with the request', undefined)
         } else {
-            callback(undefined, `${body.daily.data[0].summary} It is ${Math.round((body.currently.temperature -32) * (5/9))}°C outside right now. Probability of precipitation is ${body.currently.precipProbability * 100}%`)
+            callback(undefined, `${body.daily.data[0].summary} It is ${Math.round((body.currently.temperature -32) * (5/9))}°C outside right now. Probability of precipitation is ${parseInt(body.currently.precipProbability * 100)}%`)
         }
     })
 
