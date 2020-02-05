@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{>headContent}}
+</head>
+
+<body>
+
+    <div class="main-content">
+        {{>header}}
+        <p>Use this site to get your weather</p>
+        
+        <form>
+            <input type="text" placeholder=" Enter your location" name="address">
+            <button>Search</button>
+        </form>
+
+        <p id="msg-1"></p>
+        <p id="msg-2"></p>
+
+    </div>
+
+
+
+{{>footer}}
+
+<script src="{{script}}"></script>
